@@ -37,7 +37,7 @@ namespace ConsoleApplication1
                 Console.WriteLine(" potência do motor");
                 carro1.pot = double.Parse(Console.ReadLine());
 
-                carro1 = classificar(carro1);
+                inf = classificar(carro1);
                 Console.WriteLine("{0}", inf);
             }
           
