@@ -40,27 +40,33 @@ namespace ConsoleApplication1
                 if (km[j] <= 5000)
                     idade = "novo";
 
-                if (km[j] > 5000 && km[j] <= 30000)
+                 else if (km[j] > 5000 && km[j] <= 30000)
                     idade = "seminovo";
 
 
                 else
                     idade = "velho";
 
-                for(int x= 0; x <= i; x++)
-                {
-                    if(km[x] > 200
-                        condition = "potente";
+                
+                
+                    if(km[x] > 200)
+                    {   condition = "potente";
+                    }
+                    else if(km[x] == 120 && km[x] <= 200)
+                    {   condition = "forte";
+                    }
+                    else 
+                    {  condition = "fraco";
+                    }
+                Console.WriteLine("0},{1},{2}",idade,condition,modelo);
 
-                    if(km[x] == 120 && km[x] <= 200)
-                        //forte 120 a 200 popular menos q 200)
                 }
 
                 
             }
 
 
-
+        r
         }
     }
 }
