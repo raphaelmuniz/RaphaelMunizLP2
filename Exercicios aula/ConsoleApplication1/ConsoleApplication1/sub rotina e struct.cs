@@ -14,7 +14,7 @@ namespace ConsoleApplication1
         }
          
         
-          
+         
 
         static void Main(string[] args)
         {
@@ -82,8 +82,5 @@ namespace ConsoleApplication1
             return String.Format("{0},{1},{2}", carro1.mol, ida, pote);
         }
 
-    }
-}
-        }
     }
 }

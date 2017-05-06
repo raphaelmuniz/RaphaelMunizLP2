@@ -22,10 +22,7 @@ namespace ConsoleApplication1
             int[] potenc = new int[i];
 
 
-            Console.WriteLine("Digite um número:");
-            i= int.Parse(Console.ReadLine());
-            
-
+           
             for(int j= 0; j <= i; j++)
             {
                 Console.WriteLine("Digite o modelo do carro");
@@ -43,22 +40,24 @@ namespace ConsoleApplication1
                  else if (km[j] > 5000 && km[j] <= 30000)
                     idade = "seminovo";
 
-
                 else
                     idade = "velho";
 
+                //
                 
-                
-                    if(km[x] > 200)
-                    {   condition = "potente";
-                    }
-                    else if(km[x] == 120 && km[x] <= 200)
-                    {   condition = "forte";
-                    }
-                    else 
-                    {  condition = "fraco";
-                    }
-                Console.WriteLine("0},{1},{2}",idade,condition,modelo);
+                if(km[x] > 200)
+                 {   
+                    condition = "potente";
+                  }
+                 else if(km[x] == 120 && km[x] <= 200)
+                  {   
+                     condition = "forte";
+                  }
+                  else 
+                   {  
+                     condition = "fraco";
+                   }
+                Console.WriteLine("{0}{1},{2}",idade,condition,modelo);
 
                 }
 
