@@ -20,45 +20,41 @@ namespace ConsoleApplication1
             string modelo;
             double km  ;
             int potenc ;
+            Console.WriteLine("Digite o modelo do carro");
+            modelo = Console.ReadLine();
 
+            Console.WriteLine("Digite sua quilometragem rodada:");
+             km = double.Parse(Console.ReadLine());
 
-           
-            for(int j= 0; j <= i; j++)
-            {
-                Console.WriteLine("Digite o modelo do carro");
-                modelo = Console.ReadLine();
+            Console.WriteLine("Digite a potência do motor:");
+            potenc = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Digite sua quilometragem rodada:");
-                km = double.Parse(Console.ReadLine());
+            if (km <= 5000)
+                idade = "novo";
 
-                Console.WriteLine("Digite a potência do motor:");
-                potenc = int.Parse(Console.ReadLine());
+             else if (km > 5000 && km[j] <= 30000)
+                idade = "seminovo";
 
-                if (km <= 5000)
-                    idade = "novo";
-
-                 else if (km > 5000 && km[j] <= 30000)
-                    idade = "seminovo";
-
-                else
-                    idade = "velho";
+             else
+                idade = "velho";
 
                 //
                 
-                if(km[x] > 200)
-                 {   
-                    condition = "potente";
-                  }
-                 else if(km[x] == 120 && km[x] <= 200)
-                  {   
-                     condition = "forte";
-                  }
-                  else 
-                   {  
-                     condition = "fraco";
-                   }
-                Console.WriteLine("{0}{1},{2}",idade,condition,modelo);
-
+             if(km[x] > 200)
+             {   
+                condition = "potente";
+             }
+             else if(km[x] == 120 && km[x] <= 200)
+              {   
+                 condition = "forte";
+              }
+              else 
+               {  
+                 condition = "fraco";
+               }
+               Console.WriteLine("{0}{1},{2}",idade,condition,modelo);
+       
+               
                 }
 
                 
@@ -68,4 +64,4 @@ namespace ConsoleApplication1
         
         
     }
-}
+
