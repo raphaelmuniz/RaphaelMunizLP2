@@ -6,53 +6,47 @@ using System.Text;
 namespace ConsoleApplication1
 {
     class Program
-    { struct Carro
-        {
-            public string mol;
-            public double km;
-            public double pot;
-        }
-         
-        
-         
-
+    {      
         static void Main(string[] args)
         {
             int j;
-            string inf;
+            
+            string mol,potencia ,idade,inf;
 
             Console.WriteLine("Qual o número de carros ?");
             j = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < j; i++)
             {
-                Carro carro1= new Carro();
-
+                
+                       
                 Console.WriteLine(" o modelo do carro");
-                carro1.mol = Console.ReadLine();
+                mol = Console.ReadLine();
 
-                Console.WriteLine(" o número de km rodados");
-                carro1.km = double.Parse(Console.ReadLine());
-
-                Console.WriteLine(" potência do motor");
-                carro1.pot = double.Parse(Console.ReadLine());
-
-                inf = classificar(carro1);
-                Console.WriteLine("{0}", inf);
+              inf = classificar(potencia, idade);
+              Console.WriteLine("{0},{1},{2}", mol,idade,potencia);
             }
-          
-          }
 
-        static string classificar(Carro carro1)
+        }
+
+        static string classificar(string idade,string   potencia)
+            
         {
-            string ida, pote;
+            double pot, km;
 
-            if (carro1.km <= 5000)
+            string ida, pote;
+            Console.WriteLine(" o número de km rodados");
+            km = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(" potência do motor");
+            pot = double.Parse(Console.ReadLine());
+
+            if (km <= 5000)
             {
                 ida = "Novo";
             }
 
-            else if (carro1.km >= 3000)
+            else if (km >= 3000)
             {
                 ida = "Seminovo";
             }
@@ -64,12 +58,12 @@ namespace ConsoleApplication1
 
             //aqui começa o if da potencia
 
-            if (carro1.pot >= 200)
+            if (pot >= 200)
             {
                 pote = "Potente";
             }
 
-            else if (carro1.pot < 200 && carro1.pot >= 120)
+            else if (pot < 200 && pot>= 120)
             {
                 pote = "Forte";
             }
@@ -79,7 +73,7 @@ namespace ConsoleApplication1
                 pote = "Popular";
             }
 
-            return String.Format("{0},{1},{2}", carro1.mol, ida, pote);
+            return String.Format("{0},{1},{2}", ida, pote);
         }
 
     }

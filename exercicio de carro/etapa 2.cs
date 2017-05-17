@@ -17,27 +17,27 @@ namespace ConsoleApplication1
             string idade= "";
             string condition = "";
 
-            string[] modelo= new string[i];
-            double[] km = new double[i];
-            int[] potenc = new int[i];
+            string modelo;
+            double km  ;
+            int potenc ;
 
 
            
             for(int j= 0; j <= i; j++)
             {
                 Console.WriteLine("Digite o modelo do carro");
-                modelo[j] = Console.ReadLine();
+                modelo = Console.ReadLine();
 
                 Console.WriteLine("Digite sua quilometragem rodada:");
-                km[j] = double.Parse(Console.ReadLine());
+                km = double.Parse(Console.ReadLine());
 
                 Console.WriteLine("Digite a potência do motor:");
-                potenc[j] = int.Parse(Console.ReadLine());
+                potenc = int.Parse(Console.ReadLine());
 
-                if (km[j] <= 5000)
+                if (km <= 5000)
                     idade = "novo";
 
-                 else if (km[j] > 5000 && km[j] <= 30000)
+                 else if (km > 5000 && km[j] <= 30000)
                     idade = "seminovo";
 
                 else
@@ -65,7 +65,7 @@ namespace ConsoleApplication1
             }
 
 
-        r
-        }
+        
+        
     }
 }
