@@ -9,37 +9,62 @@ namespace DiaDoAno
     {
         static void Main(string[] args)
         {
-            string dia, data, ano, mes;
+            string  data, mes;
+            int n = 0;
+            int dia = 0;
+            
             Console.WriteLine("digite a data");
             data = (Console.ReadLine());
-            dia = data.Substring(0, 2);
-            mes = data.Substring(3, 2);
-            ano = data.Substring(6, 4);
-            if (mes == "01")
-                mes = "janeiro";
-            else if (mes == "02")
-                mes = "Fevereiro";
-            else if (mes == "03")
-                mes = " Março";
-            else if (mes == "04")
-                mes = "Abril";
-            else if (mes == "05")
-                mes = "Maio";
-            else if (mes == "06")
-                mes = "Junho";
-            else if (mes == "07")
-                mes = "Julho";
-            else if (mes == "08")
-                mes = "Agosto";
-            else if (mes == "09")
-                mes = "Setembro";
-            else if (mes == "10")
-                mes = "Outubro";
-            else if (mes == "11")
-                mes = "Novembro";
-            else if (mes == "12")
-                mes = "Dezembro";
-            Console.WriteLine("{0} de {1} de {2}", dia, mes, ano);
+            mes = data.Substring(6);
+            dia = int.Parse(data.Substring(0, 2));
+            if (mes == "janeiro")
+            {
+                n = dia;
+            }
+            else if (mes == "fevereiro")
+            {
+                n = 31 + dia;
+            }
+            else if (mes == "março")
+            {
+                n = dia + 59;
+            }
+            else if (mes == "abril")
+            {
+                n = dia + 90;
+            }
+            else if (mes == "maio")
+            {
+                n = dia + 120;
+            }
+            else if (mes == "junho")
+            {
+                n = dia + 151;
+            }
+            else if (mes == "julho")
+            {
+                n = dia + 181;
+            }
+            else if (mes == "agosto")
+            {
+                n = dia + 212;
+            }
+            else if (mes == "setembro")
+            {
+                n = dia + 243;
+            }
+            else if (mes == "outubro")
+            {
+                n = dia + 273;
+            }
+            else if (mes == "novembro")
+            {
+                n = dia + 304;
+            }
+            else
+                n = 365 - dia;
+             
+            Console.WriteLine("{0} dia ",n);
             Console.ReadLine();
 
 
