@@ -11,6 +11,8 @@ namespace ConsoleApplication1
             public string mol;
             public double km;
             public double pot;
+            public int ano;
+        
         }
          
         
@@ -37,11 +39,17 @@ namespace ConsoleApplication1
                 Console.WriteLine(" potência do motor");
                 carro1.pot = double.Parse(Console.ReadLine());
 
+                Console.WriteLine("ano");
+                carro1.ano = double.Parse(Console.ReadLine);
+
                 inf = classificar(carro1);
                 Console.WriteLine("{0}", inf);
             }
           
           }
+         
+
+         
 
         static string classificar(Carro carro1)
         {
@@ -62,7 +70,7 @@ namespace ConsoleApplication1
                 ida = "Velho";
             }
 
-            //aqui começa o if da potencia
+            //
 
             if (carro1.pot >= 200)
             {
@@ -80,6 +88,16 @@ namespace ConsoleApplication1
             }
 
             return String.Format("{0},{1},{2}", carro1.mol, ida, pote);
+        }
+        public static double taxa (carro1 c)
+        {
+            return c.km /( DateTime.Now.Year - c.ano);
+
+        }
+        public static void atualizakmcarro(carro c , double novo)
+        {
+            c.km = novo;
+
         }
 
     }
