@@ -5,9 +5,9 @@ using System.Text;
 
 namespace _8_Empresas
 {
-    class Empregado :funcionario
-    {   
-        public Empregado(string nome, int cpf, string registro, string email, string data) : base(nome, cpf, registro, email, data)
+    class tercerizado :funcionario
+    {  
+       public tercerizado(string nome, int cpf, string registro, string email, string data) : base(nome, cpf, registro, email, data)
         {
         }
         public string fomulario (string nome, int cpf, string registro, string email, string data)

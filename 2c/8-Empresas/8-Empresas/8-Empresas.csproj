@@ -46,6 +46,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Class2.cs" />
     <Compile Include="Empregado.cs" />
+    <Compile Include="funcionario.cs" />
     <Compile Include="gerente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
