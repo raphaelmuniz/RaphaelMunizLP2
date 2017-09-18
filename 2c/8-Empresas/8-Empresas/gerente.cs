@@ -9,12 +9,13 @@ namespace _8_Empresas
     {
       public double BONUS { get; set; }
       public string Setor { get; set; }
-      public gerente(string nome, int cpf, string registro, string email, string data): base(nome, cpf, registro, email, data)
+      public gerente(string nome, int cpf, string registro, string email, string data,string setor): base(nome, cpf, registro, email, data)
       {
+          this.Setor = setor;
       }
-      public string fomulario(string nome, int cpf, string registro, string email, string data)
+      public string fomulario(string nome, int cpf, string registro, string email, string data,string setor)
       {   
-       return String.Format(nome, cpf, registro, email, data);
+       return String.Format(nome, cpf, registro, email, data,setor);
        }
       }
    }

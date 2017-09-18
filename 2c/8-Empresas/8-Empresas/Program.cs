@@ -14,7 +14,7 @@ namespace _8_Empresas
             Console.WriteLine("Os tipos de funionarios SÃO Empregados (1),gerente (2),TERCERIZADO (3)");
             tipo = int.Parse(Console.ReadLine());
             
-            string email,nome ,data ,registro;
+            string email,nome ,data ,registro, setor ,empresa;
             int cpf;
             Console.WriteLine("Nome:");
             nome = Console.ReadLine();
@@ -30,12 +30,18 @@ namespace _8_Empresas
             
             Console.WriteLine("Data :");
             data = Console.ReadLine();
+
+            Console.WriteLine("Setor:");
+            setor = Console.ReadLine();
+            
+            Console.WriteLine("Empresa:");
+            empresa = Console.ReadLine();
             
 
             funcionario f = new funcionario(nome,cpf, registro, email, data);
-            gerente g = new gerente(nome, cpf, registro, email, data);
+            gerente g = new gerente(nome, cpf, registro, email, data,setor);
             Empregado e = new Empregado(nome, cpf, registro, email, data);
-            tercerizado t = new tercerizado(nome, cpf, registro, email, data);
+            tercerizado t = new tercerizado(nome, cpf, registro, email, data,empresa);
             
             if (tipo == 1)
             {
@@ -44,7 +50,7 @@ namespace _8_Empresas
 
             else if (tipo == 2)
             {
-                Console.Write(g.fomulario(nome, cpf, registro, email, data));
+                Console.Write(g.fomulario(nome, cpf, registro, email, data,setor));
             }
 
             else if (tipo == 3)

@@ -15,18 +15,23 @@ namespace _05_Produtos
         public double preco { get; set; }
       
         private string nome;
-        public string Nome {
+        public string Nome
+        {
             get { return nome; }
         }
         private int quantidade;
-        public int Quant { get { return quantidade; } }
+        public int Quant
+        { get 
+        { return quantidade; } 
+        }
 
 
-        public Produto (int id ,string nome , double preco)
+        public Produto (int id ,string nome , double preco,int quantidade)
         {
             this.id = id;
             this.nome = nome;
             this.preco = preco;
+            quantidade = 0;
             
         }
         public void Receber(int qtd)
@@ -50,7 +55,7 @@ namespace _05_Produtos
         }
         public string Imprimir()
          {
-             return string.Format("{0}, {1}, {2:0.00}", id, nome, preco);
+             return string.Format("{0}, {1}, {2:0.00}", id, nome, preco,Quant);
          }
     }
 
