@@ -5,7 +5,7 @@ using System.Text;
 
 namespace _8_Empresas
 {
-    class tercerizado :funcionario
+    class tercerizado : Empregado 
     {
         public string EmpresaM;
         

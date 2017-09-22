@@ -55,7 +55,7 @@ namespace _8_Empresas
 
             else if (tipo == 3)
             {
-                Console.Write(t.fomulario(nome, cpf, registro, email, data));
+                Console.Write(t.fomulario(nome, cpf, registro, email, data,empresa));
             }        
          
 

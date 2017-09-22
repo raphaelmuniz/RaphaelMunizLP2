@@ -26,7 +26,7 @@ namespace _05_Produtos
         }
 
 
-        public Produto (int id ,string nome , double preco,int quantidade)
+        public Produto (int id ,string nome , double preco)
         {
             this.id = id;
             this.nome = nome;
