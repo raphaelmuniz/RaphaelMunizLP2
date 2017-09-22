@@ -5,7 +5,7 @@ using System.Text;
 
 namespace _7_ConversorDeMedidas
 {
-    class conversor
+    static class conversor
     {
         public static double celsus, fahrenheit, kelvin;
         public static double km, M, Cm, pes, pol;

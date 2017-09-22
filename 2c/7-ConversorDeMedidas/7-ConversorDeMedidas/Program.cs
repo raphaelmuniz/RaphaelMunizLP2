@@ -10,7 +10,7 @@ namespace _7_ConversorDeMedidas
         static void Main(string[] args)
         {
             double temperatura = 0;
-            Console.WriteLine("Qual é a sua distacia ? ");
+            Console.WriteLine("Qual é a sua temperstura? ");
             temperatura = int.Parse(Console.ReadLine());
             int TIPO;
             Console.WriteLine("Os tipos de temperatura : cel para far (1), far para cel (2), cel para kel (3),kel para cel (4) , kel para far (5),far para kel");
